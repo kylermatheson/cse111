@@ -36,7 +36,7 @@ def plot_predictions(y_test, predictions):
     plt.show()
 
 # Example usage:
-file_path = 'user_financial_data.csv'
+file_path = "fake_bank_transactions.csv"
 
 # Load data
 data = load_financial_data(file_path)

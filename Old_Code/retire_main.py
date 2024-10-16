@@ -1,4 +1,4 @@
-
+import openai
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -7,10 +7,11 @@ import matplotlib.pyplot as plt
 
 def read_file(file_path):
     data = pd.read_csv(file_path)
-    return data.head
+    return data
     
 
-file_path = "/Users/kylematheson/Desktop/cse111/project/fake_ csvs/fake_bank_transactions.csv"
+
+file_path = "/Users/kylematheson/Desktop/cse111/project/fake_ csvs/Chase9066_Activity_20241014.CSV"
 
 data = read_file(file_path)
 
