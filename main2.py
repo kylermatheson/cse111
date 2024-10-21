@@ -25,3 +25,11 @@ def get_file_path():
     return os.path.normpath(file_path)
 
 read_cheking_data(get_file_path())
+
+def catorgize():
+    
+
+
+
+
+    return
