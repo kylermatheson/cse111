@@ -1,5 +1,6 @@
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
+import re
 
 def read_cheking_data(path):
     data_file = pd.read_csv(path)
@@ -19,9 +20,10 @@ ngrams = vectorizer.fit_transform(details_text)
 # Get the list of n-grams
 ngram_list = vectorizer.get_feature_names_out()
 
-# Display the top n-grams
-ngram_list[:20]
-print()
-print(ngram_list)
+# Filter out n-grams containing any digits using a regular expression
+filtered_ngrams = [ngram for ngram in ngram_list if not re.search(r'\d', ngram)]
+
+# Display the top n-grams without numbers
+print(filtered_ngrams[:20])
 
 
